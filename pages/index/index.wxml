@@ -1,0 +1,65 @@
+<!-- <view class="bar">
+  <view class="head" bindtouchstart="start" bindtouchmove="move" bindtouchend="chend">
+    <!-- <a class="headtitle " wx:for="{{items}}"  wx:for-index="index" wx:for-item="item">
+    {{item.title}}
+    </a>
+  </view>
+</view> -->
+<!-- <i class="weui-icon-search"></i> -->
+<view class="htop">
+  <view class="search" bindtap="search">
+    <block>
+      <icon type="search" size="20"/>
+    </block>
+  </view>
+
+  <scroll-view
+      class="head"
+      scroll-x="true"
+      scroll-with-animation="true"
+      enable-back-to-top="true"
+      >
+    <view style="display:flex;flex-direction:row;">
+      <block wx:for="{{items}}" wx:for-index="index" wx:for-item="item">
+        <a class="headtitle {{index==num?'butt':''}}" bindtap="tap" data-smile="{{index}}">{{item.title}}</a>
+      </block>
+    </view>
+  </scroll-view>
+  <view class="la" >
+    <view></view>
+    <view></view>
+    <view></view>
+    <view></view>
+  </view>
+</view>
+
+<!-- <view class="model">
+  <a>全部</a>
+</view> -->
+
+<view class='view'>
+  <map longitude="{{longitude}}" latitude="{{latitude}}" markers="{{markers}}" 
+  covers="{{covers}}" scale="{{scale}}" data-markers="{{markers}}"  show-location bindmarkertap='gotohere' bindtouchstart="num" bindtouchend="mapreduce">
+  <cover-view class="mirror" style="display:{{hand<0?'none':'block'}}">
+  </cover-view>
+  </map>
+  <audio src="{{src}}" id="myAudio" controls loop style="display:none;"></audio>
+</view>
+<!-- <view style="float:left;">{{hand}}</view>
+<view style="width:100%; height:20%;">
+  <view style="width:30%;height:90%;background:red;float:left;" bindtap="reduce">-</view>
+  <view style="width:30%;height:90%; float:left;">{{scale}}</view>
+  <view style="width:30%;height:90%; background:red; float:left;" bindtap="add">+</view>
+</view> -->
+<view class="mark">
+  <view>普光酒店</view>
+  <view>思恩广场</view>
+  <view>正法明大殿</view>
+  <view>光阴的故事</view>
+  <view>先祖庙堂</view>
+  <view></view>
+  <view></view>
+  <view></view>
+  <view></view>
+  <view></view>
+</view>
